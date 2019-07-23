@@ -46,7 +46,6 @@ int main()
         }
     }
 
-  //  for(i=0;i<n;i++)
     for(j=0;j<n;j++)
     {
         if(a[0][j]==0)
@@ -76,7 +75,7 @@ int main()
                 a[k][0]=0;
            }
 
-//cout<<r<<c;
+//for printing
     for(i=0;i<n;i++)
     {
         for(j=0;j<n;j++)
