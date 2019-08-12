@@ -1,0 +1,30 @@
+listnode* detectCycle(listnode* A) {
+    //int k=0;
+    if(A==NULL||A->next==NULL)
+    return NULL;
+    listnode* ptr1=A;
+    listnode* begin=NULL;
+    listnode* curr=A;
+    while(curr!=NULL&&curr->next!=NULL)
+    {
+        ptr1=ptr1->next;
+        if(ptr1)
+        curr=curr->next->next;
+        if(ptr1==curr)
+        {
+         break;
+        }
+    }
+    if(curr==NULL||curr->next==NULL)
+    return NULL;
+    curr=A;
+    while(curr)
+    {
+        curr=curr->next;
+        ptr1=ptr1->next;
+        if(curr==ptr1)
+        break;
+    }
+    return ptr1;
+    
+}
